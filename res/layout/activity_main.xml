@@ -8,9 +8,37 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/b_projlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Project List" />
+
+    <Button
+        android:id="@+id/b_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b_projlist"
+        android:layout_centerHorizontal="true"
+        android:text="Credits" />
+
+    <Button
+        android:id="@+id/b_guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b_credits"
+        android:layout_centerHorizontal="true"
+        android:text="Guess" />
+
+    <Button
+        android:id="@+id/b_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b_guess"
+        android:layout_centerHorizontal="true"
+        android:text="Search" />
 
 </RelativeLayout>

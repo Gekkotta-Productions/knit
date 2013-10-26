@@ -22,6 +22,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+          <activity
+            android:name=".ProjectList"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.gekkotta.productions.knit.PROJECTLIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+              <activity
+            android:name=".Knit"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.gekkotta.productions.knit.KNIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          
+            <activity
+            android:name=".Search"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.gekkotta.productions.knit.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
     </application>
 
 </manifest>
