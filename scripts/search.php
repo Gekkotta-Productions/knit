@@ -14,6 +14,8 @@ while ($r = mysql_fetch_assoc($objQuery)){
 	$rows[] = $r;
 }
 
+print '{"knittens":';
 print json_encode($rows);
+print '}';
 
 ?>

@@ -1,3 +1,6 @@
+print '{"knittens":';
+print json_encode($rows);
+print '}';
 <?php
 
 $objConnect = mysql_connect("localhost","root","");
@@ -14,6 +17,7 @@ $rows = array();
 while ($r = mysql_fetch_assoc($objQuery)){
 	$rows[] = $r;;
 }
-
+echo '{"knittens":'
 echo json_encode($rows);
+echo '}';
 ?>
