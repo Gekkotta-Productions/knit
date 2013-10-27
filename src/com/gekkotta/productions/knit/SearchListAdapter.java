@@ -56,6 +56,7 @@ public class SearchListAdapter extends BaseAdapter {
 		if(convertView==null){
 			vi = c.getLayoutInflater().inflate(R.layout.projlistitem, null);
 		}
+		
 		TextView title = (TextView)vi.findViewById(R.id.tv_title);
 		title.setText("WHAT UP PEEPS!");
 		ProgressBar pb = (ProgressBar)vi.findViewById(R.id.pb_progress);

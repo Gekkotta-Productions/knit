@@ -2,6 +2,7 @@ package com.gekkotta.productions.knit;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -11,23 +12,40 @@ import android.util.Log;
 
 public class ProjectHolder {
 	private String raw;
-	private static final String URL = "http://10.21.157.42/getList.php";
-
+	private static final String URL = "http://192.168.1.104/getList.php?q=1";
+	List<Project> list = null;
+	
 	public ProjectHolder(){
 		
 	}
 	
 	List<Project> fetchProjects(){
 		
-		new readServerContents();
-		Log.d("Andrew", "Andy: " + raw);
-		List<Project> list = new ArrayList<Project>();
+		readServerContents r = new readServerContents();
+		list = new ArrayList<Project>();
+		String swag = "";
+		
 		try {
-			JSONObject data = new JSONObject(raw).getJSONObject("data");
-			JSONArray children = data.getJSONArray("children");
-			
+			swag = r.execute(URL).get();
+			Log.d("Andrew", "THIS BITCH GOT WHEELZ: " + swag);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Log.d("Andrew", "executed");
+		
+		try {
+			JSONObject data = new JSONObject(swag);
+			Log.d("Andrew", "YOLOSWAG THIS BETTER SHOW THE FUCK UP: " + swag);
+			JSONArray children = data.getJSONArray("knittens");
+			Log.d("Andrew", "LETS HIRE SOME STRIPPERS: " + swag);
+			Log.d("Andrew", "made array of length " + children.length());
 			for(int i = 0; i < children.length(); i++) {
-                JSONObject cur = children.getJSONObject(i).getJSONObject("data");
+                JSONObject cur = children.getJSONObject(i);
+                Log.d("Andrew", "TIMMY WAS CURED OF CANCER");
                 Project p = new Project();
                 p.name = cur.optString("name");
                 p.description = cur.optString("description");
@@ -45,6 +63,7 @@ public class ProjectHolder {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		return list;
 	}
 	
@@ -52,13 +71,15 @@ public class ProjectHolder {
 
 		@Override
 		protected String doInBackground(String... params) {
-			 return RemoteData.readContents(URL);
+			Log.d("Andrew", RemoteData.readContents(URL));
+			raw = RemoteData.readContents(URL);
+			return RemoteData.readContents(URL);
 		}
+		
 		@Override
 		protected void onPostExecute(String result) {
 			// TODO Auto-generated method stub
 			super.onPostExecute(result);
-			 raw = result;
 		}
 	
 	}

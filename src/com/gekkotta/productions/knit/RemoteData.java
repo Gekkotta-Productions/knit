@@ -52,6 +52,7 @@ public class RemoteData {
                 sb.append(tmp).append("\n");
             }
             br.close();
+            Log.d("Andrew", sb.toString());
             return sb.toString();
         } catch (IOException e) {
         	Log.d("Andrew", "SWAGGER");
