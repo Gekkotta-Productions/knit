@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+         android:layout_marginTop="10dp"
         android:src="@drawable/ic_action_name" />
 
     <EditText
@@ -37,6 +38,7 @@
         android:layout_alignBottom="@+id/ib_search"
         android:layout_alignLeft="@+id/linearLayout1"
         android:layout_toLeftOf="@+id/ib_search"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Search For Pattern..." />
 
