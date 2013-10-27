@@ -27,32 +27,37 @@ public final class R {
         public static final int listitem_selector=0x7f020003;
     }
     public static final class id {
-        public static final int RelativeLayout1=0x7f08000a;
-        public static final int action_settings=0x7f080012;
-        public static final int autoCompleteTextView1=0x7f080010;
+        public static final int RelativeLayout1=0x7f08000d;
+        public static final int action_settings=0x7f080015;
+        public static final int autoCompleteTextView1=0x7f080013;
         public static final int b_credits=0x7f080001;
         public static final int b_guess=0x7f080002;
-        public static final int b_newProject=0x7f08000b;
+        public static final int b_newProject=0x7f08000e;
         public static final int b_projlist=0x7f080000;
         public static final int b_search=0x7f080003;
-        public static final int imageButton1=0x7f08000f;
-        public static final int list=0x7f08000c;
-        public static final int listView1=0x7f080011;
-        public static final int pb_progress=0x7f08000e;
-        public static final int progressBar1=0x7f080005;
-        public static final int rowdown=0x7f080008;
-        public static final int rowout=0x7f080006;
-        public static final int rowup=0x7f080009;
-        public static final int textOut=0x7f080007;
-        public static final int textout=0x7f080004;
-        public static final int tv_title=0x7f08000d;
+        public static final int imageButton1=0x7f080012;
+        public static final int list=0x7f08000f;
+        public static final int list2=0x7f08000b;
+        public static final int listView1=0x7f080014;
+        public static final int pb_progress=0x7f080011;
+        public static final int progressBar1=0x7f080006;
+        public static final int rowdown=0x7f080009;
+        public static final int rowout=0x7f080007;
+        public static final int rowup=0x7f08000a;
+        public static final int textOut=0x7f080008;
+        public static final int textView1=0x7f080004;
+        public static final int textout=0x7f080005;
+        public static final int tv_name=0x7f08000c;
+        public static final int tv_title=0x7f080010;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int knit=0x7f030001;
-        public static final int projlist=0x7f030002;
-        public static final int projlistitem=0x7f030003;
-        public static final int search=0x7f030004;
+        public static final int projectlist=0x7f030002;
+        public static final int projectlistitem=0x7f030003;
+        public static final int projlist=0x7f030004;
+        public static final int projlistitem=0x7f030005;
+        public static final int search=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f070000;
