@@ -17,7 +17,7 @@ public class ProjectListServer extends Activity{
 	ListView projList;
     ArrayAdapter<Project> adapter;
     Handler handler;
-
+    private static String URL = "http://192.168.1.104/getList.php?q=1";
     String subreddit;
     List<Project> projects;
     ProjectHolder projHolder;
@@ -25,7 +25,7 @@ public class ProjectListServer extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.projectlist);
-        ProjectHolder ph = new ProjectHolder();
+        ProjectHolder ph = new ProjectHolder(URL);
         projects = ph.fetchProjects();
 		projList = (ListView)findViewById(R.id.list2);
 		projList.setAdapter(new ProjectListServerAdapter(this, projects));

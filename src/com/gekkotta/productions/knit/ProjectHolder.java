@@ -12,13 +12,15 @@ import android.util.Log;
 
 public class ProjectHolder {
 	private String raw;
-	private static final String URL = "http://192.168.1.104/getList.php?q=1";
+	  private static String URL;
 	List<Project> list = null;
 	
-	public ProjectHolder(){
-		
+	public ProjectHolder(String url){
+		URL=url;
 	}
-	
+	public void updateURL(String url){
+		URL=url;
+	}
 	List<Project> fetchProjects(){
 		
 		readServerContents r = new readServerContents();
@@ -56,6 +58,7 @@ public class ProjectHolder {
                 p.needleSize = cur.getInt("needleSize");
                 if(p.name != null) {
                     list.add(p);
+                    Log.d("Andrew", "added p");
                 }
             }
 			
