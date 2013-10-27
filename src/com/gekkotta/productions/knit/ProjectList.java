@@ -45,6 +45,7 @@ public class ProjectList extends Activity {
 				Intent i = new Intent("com.gekkotta.productions.knit.KNIT");
 				startActivity(i);
 			}
+	
 		});
 
 		newProj = (Button) findViewById(R.id.b_newProject);
