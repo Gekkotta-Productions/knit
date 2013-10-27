@@ -2,16 +2,10 @@
 $objConnect = mysql_connect("localhost","root","");
 $objDB = mysql_select_db("knits");
 
-$val = $_GET["q"];
+$search = $_GET["query"];
 
-$query = "";
+$query = "SELECT `projID`,`name`,`image` FROM projects WHERE description LIKE '%$search%'";
 
-if ($val == "a"){
-	$query = "SELECT * FROM projects;";
-}
-else{
-	$query = "SELECT * FROM projects WHERE projID = '$val';";
-}
 $objQuery = mysql_query($query);
 
 $rows = array();
@@ -19,6 +13,7 @@ $rows = array();
 while ($r = mysql_fetch_assoc($objQuery)){
 	$rows[] = $r;
 }
+
 print '{"knittens":';
 print json_encode($rows);
 print '}';
