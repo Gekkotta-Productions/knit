@@ -32,12 +32,12 @@ public final class R {
         public static final int autoCompleteTextView1=0x7f080010;
         public static final int b_credits=0x7f080001;
         public static final int b_guess=0x7f080002;
+        public static final int b_newProject=0x7f08000b;
         public static final int b_projlist=0x7f080000;
         public static final int b_search=0x7f080003;
         public static final int imageButton1=0x7f08000f;
         public static final int list=0x7f08000c;
         public static final int listView1=0x7f080011;
-        public static final int newProject=0x7f08000b;
         public static final int pb_progress=0x7f08000e;
         public static final int progressBar1=0x7f080005;
         public static final int rowdown=0x7f080008;
