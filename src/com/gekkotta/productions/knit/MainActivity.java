@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.io.IOException;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 //Typical menu
 public class MainActivity extends Activity {
@@ -72,9 +74,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				// Intent i = new
-				// Intent("com.gekkotta.productions.knit.Credits");
-				// startActivity(i);
+				Intent i = new Intent("com.gekkotta.productions.knit.SERVERLIST");
+				startActivity(i);
 			}
 		});
 

@@ -8,12 +8,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import android.util.Log;
+
 public class RowList{
 
-	StringBuffer response;
+	public StringBuffer response;
 
 	public RowList() throws IOException{
-		String target = "http://10.21.157.42/getPatterns.php";
+		String target = "http://10.21.157.42/getPattern.php";
 		String urlParameters = "";
 		URL url;
 		HttpURLConnection connection = null;
@@ -34,6 +36,8 @@ public class RowList{
 		wr.flush();
 		wr.close();
 
+		Log.e("SWAG", "" + connection.getResponseCode());
+		
 		InputStream is = connection.getInputStream();
 		BufferedReader rd = new BufferedReader(new InputStreamReader(is));
 		String line;
@@ -43,5 +47,9 @@ public class RowList{
 			response.append('\r');
 		}
 		rd.close();
+	}
+	
+	public String getWord(){
+		return response.toString();
 	}
 }
