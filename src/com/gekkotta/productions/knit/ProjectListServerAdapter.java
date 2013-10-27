@@ -43,9 +43,9 @@ public class ProjectListServerAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View vi = convertView;
 		if(convertView==null){
-			vi = c.getLayoutInflater().inflate(R.layout.projectlistitem, null);
+			vi = c.getLayoutInflater().inflate(R.layout.projlistitem, null);
 		}
-		TextView title = (TextView)vi.findViewById(R.id.tv_name);
+		TextView title = (TextView)vi.findViewById(R.id.tv_title);
 		title.setText(projects.get(position).getName());
 		return vi;
 	}
