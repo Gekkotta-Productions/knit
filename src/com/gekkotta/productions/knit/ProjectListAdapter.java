@@ -6,14 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class ProjectListAdapter extends BaseAdapter {
-    private Activity activity;
-    private static LayoutInflater inflater=null;
+    private Activity c;
 	public ProjectListAdapter(Activity a) {
-		activity = a;
-		inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		// TODO Auto-generated constructor stub
+		c = a;
 	}
 	
 	@Override
@@ -38,7 +37,11 @@ public class ProjectListAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View vi = convertView;
 		if(convertView==null){
-			vi = inflater.inflate(R.layout.projlistitem, null);
+			vi = c.getLayoutInflater().inflate(R.layout.projlistitem, null);
+			TextView title = (TextView)vi.findViewById(R.id.tv_title);
+			title.setText("WHAT UP PEEPS!");
+			ProgressBar pb = (ProgressBar)vi.findViewById(R.id.pb_progress);
+			pb.setProgress(50);
 		}
 		
 		return vi;
